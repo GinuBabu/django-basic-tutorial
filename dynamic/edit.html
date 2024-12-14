@@ -1,0 +1,71 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/register.css' %}"> -->
+</head>
+<body>
+    <div class="container">
+       
+         <!-- <input type="text" name="idvalue" value="{{singledata.id}}" hidden>  
+        <label for="email"><b>Name</b></label>
+            <input type="text" name="name" value="{{singledata.name}}">
+        <label for="email"><b>Age</b></label>
+            <input type="text"  name="age" value="{{singledata.age}}" >
+          <label for="email"><b>Email</b></label>
+            <input type="text"  name="email" value="{{singledata.email}}" >
+          
+        <label for="psw"><b>Password</b></label>
+           <input type="password" name="psw" value="{{singledata.password}}" >
+           
+        <label for="email"><b>Phone Number</b></label><br>
+           <input type="phone" name="phone" value="{{singledata.phone}}" > -->
+           <form  method="post" action="{% url 'update' %}">
+            <h1 style="color: rgb(0, 72, 255);">Edit</h1>
+            {% csrf_token %}
+            
+            
+            <input type="email" class="form-control" id="inputEmail3" name="name" value="{{singledata.id}}" hidden>
+              
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" name="name" value="{{singledata.name}}">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Age</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" name="age" value="{{singledata.age}}">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3"  name="email" value="{{singledata.email}}">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" name="psw" value="{{singledata.password}}" >
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="inputEmail3" class="col-sm-2 col-form-label">Phone</label>
+              <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" name="phone" value="{{singledata.phone}}" >
+              </div>
+            </div>
+          
+                
+              
+            <button type="submit" class="btn btn-primary">Sign in</button>
+          </form>
+       
+      </form>
+</body>
+</html>

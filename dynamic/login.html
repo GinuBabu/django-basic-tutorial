@@ -1,0 +1,37 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<body>
+
+    <form method="post" action="{% url 'login' %}">    
+      {% csrf_token %}
+      <div class="container">
+        <h1 style="color: red;">{{error}}</h1>
+      <h1>Login Page</h1>
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" >
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" >
+        <p>Not Registered <a href="{% url 'register' %}" style="color:dodgerblue">Register</a></p>
+      
+        <div class="clearfix">      
+            <button type="submit" class="btn">Login</button>
+          </div>
+          <div class="youtubeBtn">
+            <a target="_blank" href="https://www.youtube.com/watch?v=7k8kKRQa9jY">
+                <span>Watch on YouTube</span>
+            <i class="fab fa-youtube"></i>
+        </div>
+      </form>
+</div>
+</body>
+</html>
+</body>
+</html>  
+

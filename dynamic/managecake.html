@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Cake</title>
+    <link rel="stylesheet" href="{% static 'css/sellerdash.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+     <form action="" method="post"></form>
+    <header class="navbar">
+        <h1>Cake Shop Seller Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">My Cakes</a></li>
+                <li><a href="#">Orders</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+      <!-- Manage Cakes Section -->
+      <section class="manage-cakes">
+        <h2>Manage Cakes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cake Name</th>
+                    <th>Price</th>
+                    <th>Stock</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody> 
+                <tr>
+                    <td>Chocolate Cake</td>
+                    <td>$20</td>
+                    <td>15</td>
+                    <td>
+                        <a href="#" class="edit-btn">Edit</a>
+                        <a href="#" class="delete-btn">Delete</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Red Velvet</td>
+                    <td>$25</td>
+                    <td>10</td>
+                    <td>
+                        <a href="#" class="edit-btn">Edit</a>
+                        <a href="#" class="delete-btn">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <a href="#" class="add-cake-btn">Add New Cake</a>
+    </section>
+    
+</body>
+</html>

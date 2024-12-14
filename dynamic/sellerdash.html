@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - Cake Shop</title>
+    <link rel="stylesheet" href="{% static 'css/sellerdash.css' %}">
+</head>
+<body>
+    <!-- Navigation Bar -->
+     <form action="" method="post">
+    <header class="navbar">
+        <div class="logo">
+            <h1>Cake Shop</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">Dashboard</a></li>
+                <li><a href="{% url 'managecake' %}">My Cakes</a></li>
+                <li><a href="">Orders</a></li>
+                <li><a href="">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>Overview</h2>
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>Total Sales</h3>
+                    <p>$1500</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Total Cakes</h3>
+                    <p>25</p>
+                </div>
+                <div class="stat-box">
+                    <h3>Pending Orders</h3>
+                    <p>12</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Manage Cakes Section -->
+        <section class="manage-cakes">
+            <h2>Manage Cakes</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cake Name</th>
+                        <th>Price</th>
+                        <th>Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Cake Row -->
+                    <tr>
+                        <td>Chocolate Fudge</td>
+                        <td>$20</td>
+                        <td>15</td>
+                        <td>
+                            <a href="" class="edit-btn">Edit</a>
+                            <a href="" class="delete-btn">Delete</a>
+                        </td>
+                    </tr>
+                    <!-- Repeat for other cakes -->
+                </tbody>
+            </table>
+            <a href="" class="add-cake-btn">Add New Cake</a>
+        </section>
+
+        <!-- Orders Section -->
+        <section class="orders">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Example Order Row -->
+                    <tr>
+                        <td>#1001</td>
+                        <td>John Doe</td>
+                        <td>$45</td>
+                        <td>Pending</td>
+                        <td><a href="" class="view-btn">View</a></td>
+                    </tr>
+                    <!-- Repeat for other orders -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Cake Shop. All Rights Reserved.</p>
+    </footer>
+</form>
+</body>
+</html>

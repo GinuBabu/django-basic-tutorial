@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start Selling</title>
+    <link rel="stylesheet" href="{% static 'css/sellerpage.css' %}">
+</head>
+<body>
+    <!-- <img src="{% static 'images/cakeseller.jpg' %}" alt="..."  style="height:300px"> -->
+    <div class="container" style="position: absolute;right:50px">
+        <header>
+            <h1>Welcome to the Seller Platform</h1>
+            <p>Start selling your products with ease.</p>
+        </header>
+
+        <div class="content">
+            <button class="start-selling-btn" ><a href="{% url 'userapp/login.html' %}">Start Selling</a></button>
+        </div>
+
+        <footer>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </footer>
+    </div>
+</body>
+</html>
